@@ -18,6 +18,7 @@ DIRECTION = "D"
 WINDSPEED = "F"
 DESCRIPTION = "W"
 MEASURES = (TEMPERATURE, WINDSPEED, DIRECTION, DESCRIPTION)
+STATUS_OK = 200
 
 
 def fetch_forecast(
@@ -52,6 +53,7 @@ def fetch_forecast(
     url = f"https://{API_URL}?{parameters}"
     response = requests.get(url=url)
 
+    assert response.status_code == STATUS_OK
     xml_str = response.content  # response.text works too.
 
     return extract_data_from_response(xml=xml_str, start=start, end=end)
