@@ -112,7 +112,10 @@ def ask_for_time_input() -> tuple[datetime]:
 def ask_for_desired_time() -> datetime:
     """Ask the user to specify a single point for which to check the forecast."""
     print("For what time would you like to see the forecast?")
+    return ask_for_time_point()
 
+
+def ask_for_time_point() -> datetime:
     print("What day? '0' for today, '1' for tomorrow, etc.")
     while not valid_day(days_ahead := input().strip()):
         print("Please enter a non-negative integer")
@@ -143,9 +146,18 @@ def valid_hour(hour: str) -> bool:
         return False
 
 
-def ask_for_desired_period():
+def ask_for_desired_period() -> tuple[datetime]:
     """Ask the user to specify two ends of a forecast interval."""
-    raise NotImplementedError
+    print("Please specify first one end of the period you want.")
+    start = ask_for_time_point()
+
+    print("Now the other end.")
+    end = ask_for_time_point()
+
+    if end < start:
+        start, end = end, start
+
+    return (start, end)
 
 
 if __name__ == "__main__":
