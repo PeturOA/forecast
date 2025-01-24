@@ -21,6 +21,13 @@ MEASURES = (TEMPERATURE, WINDSPEED, DIRECTION, DESCRIPTION)
 STATUS_OK = 200
 
 
+def take_the_xml_parser_for_a_spin() -> None:
+    """Look up weather forecast for the next 24 hours."""
+    today = datetime.now()
+    tomorrow = today + timedelta(1)
+    fetch_forecast(start=today, end=tomorrow)
+
+
 def fetch_forecast(
     start: datetime,
     end: datetime,
@@ -125,3 +132,7 @@ def update_bounds(
             first_after = current_forecast
 
     return last_before, first_after
+
+
+if __name__ == "__main__":
+    take_the_xml_parser_for_a_spin()
