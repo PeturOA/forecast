@@ -1,0 +1,88 @@
+<forecasts>
+  <station id="1"  valid="1">
+    <name>Reykjavík</name>
+    <atime>2025-01-23 06:00:00</atime>
+    <err></err>
+    <link><![CDATA[http://www.vedur.is/vedur/spar/stadaspar/hofudborgarsvaedid/#group=100&station=1]]></link>
+    <forecast>
+      <ftime>2025-01-23 07:00:00</ftime>
+      <F>8</F>
+      <D>A</D>
+      <T>1</T>
+      <W>Heiðskírt</W>
+    </forecast>
+    <forecast>
+      <ftime>2025-01-23 08:00:00</ftime>
+      <F>9</F>
+      <D>A</D>
+      <T>1</T>
+      <W>Léttskýjað</W>
+    </forecast>
+    <forecast>
+      <ftime>2025-01-23 09:00:00</ftime>
+      <F>10</F>
+      <D>ASA</D>
+      <T>2</T>
+      <W>Lítils háttar slydda</W>
+    </forecast>
+    <forecast>
+      <ftime>2025-01-23 10:00:00</ftime>
+      <F>10</F>
+      <D>ASA</D>
+      <T>2</T>
+      <W>Slydda</W>
+    </forecast>
+    <forecast>
+      <ftime>2025-01-23 11:00:00</ftime>
+      <F>7</F>
+      <D>A</D>
+      <T>2</T>
+      <W>Rigning</W>
+    </forecast>
+    <forecast>
+      <ftime>2025-01-23 12:00:00</ftime>
+      <F>7</F>
+      <D>A</D>
+      <T>4</T>
+      <W>Rigning</W>
+    </forecast>
+    <forecast>
+      <ftime>2025-01-23 13:00:00</ftime>
+      <F>8</F>
+      <D>SA</D>
+      <T>3</T>
+      <W>Rigning</W>
+    </forecast>
+    <forecast>
+      <ftime>2025-01-23 14:00:00</ftime>
+      <F>2</F>
+      <D>SSV</D>
+      <T>1</T>
+      <W>Rigning</W>
+    </forecast>
+    <forecast>
+      <ftime>2025-01-23 15:00:00</ftime>
+      <F>1</F>
+      <D>S</D>
+      <T>1</T>
+      <W>Slydda</W>
+    </forecast>
+    <forecast>
+      <ftime>2025-01-23 16:00:00</ftime>
+      <F>2</F>
+      <D>A</D>
+      <T>1</T>
+      <W>Slydda</W>
+    </forecast>
+    <forecast>
+      <ftime>2025-01-23 17:00:00</ftime>
+      <F>2</F>
+      <D>ASA</D>
+      <T>1</T>
+      <W>Slydda</W>
+    </forecast>
+    <forecast>
+      <ftime>2025-01-23 18:00:00</ftime><F>3</F><D>SA</D><T>2</T><W>Rigning</W></forecast><forecast><ftime>2025-01-23 19:00:00</ftime><F>4</F><D>SSV</D><T>1</T><W>Lítils háttar slydda</W></forecast><forecast><ftime>2025-01-23 20:00:00</ftime><F>2</F><D>S</D><T>1</T><W>Lítils háttar slydda</W></forecast><forecast><ftime>2025-01-23 21:00:00</ftime><F>2</F><D>SA</D><T>1</T><W>Lítils háttar slydda</W></forecast><forecast><ftime>2025-01-23 22:00:00</ftime><F>2</F><D>ASA</D><T>1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-23 23:00:00</ftime><F>3</F><D>A</D><T>0</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 00:00:00</ftime><F>3</F><D>ASA</D><T>1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 01:00:00</ftime><F>3</F><D>A</D><T>1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 02:00:00</ftime><F>2</F><D>ASA</D><T>0</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 03:00:00</ftime><F>2</F><D>SA</D><T>0</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 04:00:00</ftime><F>3</F><D>ASA</D><T>0</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 05:00:00</ftime><F>3</F><D>SA</D><T>0</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 06:00:00</ftime><F>2</F><D>ASA</D><T>0</T><W>Skýjað</W></forecast><forecast><ftime>2025-01-24 07:00:00</ftime><F>3</F><D>A</D><T>-1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 08:00:00</ftime><F>3</F><D>ASA</D><T>-1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 09:00:00</ftime><F>3</F><D>ASA</D><T>-1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 10:00:00</ftime><F>3</F><D>A</D><T>-1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 11:00:00</ftime><F>3</F><D>A</D><T>-1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 12:00:00</ftime><F>2</F><D>ASA</D><T>-1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 13:00:00</ftime><F>2</F><D>ASA</D><T>0</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 14:00:00</ftime><F>2</F><D>ASA</D><T>1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 15:00:00</ftime><F>1</F><D>SA</D><T>1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 16:00:00</ftime><F>1</F><D>VNV</D><T>1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 17:00:00</ftime><F>2</F><D>NNV</D><T>1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 18:00:00</ftime><F>3</F><D>NNV</D><T>1</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-24 19:00:00</ftime><F>3</F><D>NNA</D><T>1</T><W>Lítils háttar snjókoma</W></forecast><forecast><ftime>2025-01-24 20:00:00</ftime><F>4</F><D>NNV</D><T>1</T><W>Lítils háttar snjókoma</W></forecast><forecast><ftime>2025-01-24 21:00:00</ftime><F>4</F><D>NNV</D><T>0</T><W>Snjókoma</W></forecast><forecast><ftime>2025-01-24 22:00:00</ftime><F>5</F><D>NNV</D><T>0</T><W>Snjókoma</W></forecast><forecast><ftime>2025-01-24 23:00:00</ftime><F>4</F><D>NNV</D><T>0</T><W>Snjókoma</W></forecast><forecast><ftime>2025-01-25 00:00:00</ftime><F>4</F><D>NNV</D><T>0</T><W>Snjókoma</W></forecast><forecast><ftime>2025-01-25 01:00:00</ftime><F>3</F><D>NNV</D><T>0</T><W>Snjókoma</W></forecast><forecast><ftime>2025-01-25 02:00:00</ftime><F>3</F><D>NNV</D><T>0</T><W>Snjókoma</W></forecast><forecast><ftime>2025-01-25 03:00:00</ftime><F>2</F><D>NV</D><T>0</T><W>Slydda</W></forecast><forecast><ftime>2025-01-25 04:00:00</ftime><F>1</F><D>VSV</D><T>0</T><W>Slydda</W></forecast><forecast><ftime>2025-01-25 05:00:00</ftime><F>2</F><D>SV</D><T>0</T><W>Slydda</W></forecast><forecast><ftime>2025-01-25 06:00:00</ftime><F>2</F><D>SV</D><T>0</T><W>Slydda</W></forecast><forecast><ftime>2025-01-25 07:00:00</ftime><F>2</F><D>VSV</D><T>0</T><W>Slydda</W></forecast><forecast><ftime>2025-01-25 08:00:00</ftime><F>7</F><D>V</D><T>1</T><W>Slydda</W></forecast><forecast><ftime>2025-01-25 09:00:00</ftime><F>7</F><D>V</D><T>1</T><W>Slydda</W></forecast><forecast><ftime>2025-01-25 10:00:00</ftime><F>8</F><D>V</D><T>1</T><W>Lítils háttar slydda</W></forecast><forecast><ftime>2025-01-25 11:00:00</ftime><F>8</F><D>V</D><T>1</T><W>Lítils háttar slydda</W></forecast><forecast><ftime>2025-01-25 12:00:00</ftime><F>7</F><D>V</D><T>2</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-25 13:00:00</ftime><F>6</F><D>V</D><T>2</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-25 14:00:00</ftime><F>5</F><D>VNV</D><T>2</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-25 15:00:00</ftime><F>5</F><D>VSV</D><T>2</T><W>Lítils háttar slydda</W></forecast><forecast><ftime>2025-01-25 16:00:00</ftime><F>6</F><D>V</D><T>1</T><W>Lítils háttar slydda</W></forecast><forecast><ftime>2025-01-25 17:00:00</ftime><F>5</F><D>V</D><T>2</T><W>Lítils háttar slydda</W></forecast><forecast><ftime>2025-01-25 18:00:00</ftime><F>5</F><D>V</D><T>2</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-25 19:00:00</ftime><F>3</F><D>V</D><T>2</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-25 20:00:00</ftime><F>4</F><D>VSV</D><T>2</T><W>Skýjað</W></forecast><forecast><ftime>2025-01-25 21:00:00</ftime><F>3</F><D>SV</D><T>1</T><W>Léttskýjað</W></forecast><forecast><ftime>2025-01-25 22:00:00</ftime><F>3</F><D>SV</D><T>0</T><W>Heiðskírt</W></forecast><forecast><ftime>2025-01-25 23:00:00</ftime><F>3</F><D>SSV</D><T>0</T><W>Léttskýjað</W></forecast><forecast><ftime>2025-01-26 00:00:00</ftime><F>3</F><D>SSV</D><T>-1</T><W>Léttskýjað</W></forecast><forecast><ftime>2025-01-26 01:00:00</ftime><F>3</F><D>SSV</D><T>-1</T><W>Heiðskírt</W></forecast><forecast><ftime>2025-01-26 02:00:00</ftime><F>2</F><D>S</D><T>-2</T><W>Heiðskírt</W></forecast><forecast><ftime>2025-01-26 03:00:00</ftime><F>2</F><D>S</D><T>-2</T><W>Heiðskírt</W></forecast><forecast><ftime>2025-01-26 04:00:00</ftime><F>2</F><D>S</D><T>-2</T><W>Heiðskírt</W></forecast><forecast><ftime>2025-01-26 05:00:00</ftime><F>2</F><D>S</D><T>-3</T><W>Heiðskírt</W></forecast><forecast><ftime>2025-01-26 06:00:00</ftime><F>2</F><D>S</D><T>-3</T><W>Heiðskírt</W></forecast><forecast><ftime>2025-01-26 09:00:00</ftime><F>3</F><D>ASA</D><T>-5</T><W>Léttskýjað</W></forecast><forecast><ftime>2025-01-26 12:00:00</ftime><F>3</F><D>ASA</D><T>-7</T><W>Skýjað</W></forecast><forecast><ftime>2025-01-26 15:00:00</ftime><F>4</F><D>ASA</D><T>-6</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-26 18:00:00</ftime><F>4</F><D>ASA</D><T>-7</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-26 21:00:00</ftime><F>5</F><D>ASA</D><T>-6</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-27 00:00:00</ftime><F>5</F><D>A</D><T>-6</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-27 03:00:00</ftime><F>4</F><D>A</D><T>-5</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-27 06:00:00</ftime><F>3</F><D>A</D><T>-5</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-27 09:00:00</ftime><F>3</F><D>A</D><T>-5</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-27 12:00:00</ftime><F>2</F><D>ASA</D><T>-5</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-27 15:00:00</ftime><F>3</F><D>A</D><T>-4</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-27 18:00:00</ftime><F>2</F><D>A</D><T>-4</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-27 21:00:00</ftime><F>1</F><D>ASA</D><T>-4</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-28 00:00:00</ftime><F>2</F><D>ASA</D><T>-4</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-28 03:00:00</ftime><F>3</F><D>A</D><T>-5</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-28 06:00:00</ftime><F>2</F><D>ASA</D><T>-7</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-28 09:00:00</ftime><F>2</F><D>A</D><T>-7</T><W>Skýjað</W></forecast><forecast><ftime>2025-01-28 12:00:00</ftime><F>1</F><D>A</D><T>-7</T><W>Skýjað</W></forecast><forecast><ftime>2025-01-28 15:00:00</ftime><F>2</F><D>ANA</D><T>-6</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-28 18:00:00</ftime><F>2</F><D>A</D><T>-6</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-28 21:00:00</ftime><F>2</F><D>ASA</D><T>-8</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-29 00:00:00</ftime><F>2</F><D>ASA</D><T>-8</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-29 06:00:00</ftime><F>1</F><D>ASA</D><T>-9</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-29 12:00:00</ftime><F>1</F><D>SA</D><T>-8</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-29 18:00:00</ftime><F>1</F><D>SA</D><T>-8</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-30 00:00:00</ftime><F>2</F><D>ASA</D><T>-10</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-30 06:00:00</ftime><F>4</F><D>ASA</D><T>-12</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-30 12:00:00</ftime><F>12</F><D>ASA</D><T>-5</T><W>Alskýjað</W></forecast><forecast><ftime>2025-01-30 18:00:00</ftime><F>21</F><D>ASA</D><T>0</T><W>Snjókoma</W></forecast><forecast><ftime>2025-01-31 00:00:00</ftime><F>15</F><D>ASA</D><T>2</T><W>Rigning</W></forecast><forecast><ftime>2025-01-31 06:00:00</ftime><F>10</F><D>VSV</D><T>3</T><W>Rigning</W></forecast><forecast><ftime>2025-01-31 12:00:00</ftime><F>7</F><D>SV</D><T>1</T><W>Snjóél</W></forecast><forecast><ftime>2025-01-31 18:00:00</ftime><F>3</F><D>SV</D><T>0</T><W>Snjóél</W></forecast><forecast><ftime>2025-02-01 00:00:00</ftime><F>9</F><D>A</D><T>-3</T><W>Lítils háttar snjókoma</W></forecast><forecast><ftime>2025-02-01 06:00:00</ftime><F>18</F><D>ANA</D><T>0</T><W>Snjókoma</W></forecast><forecast><ftime>2025-02-01 12:00:00</ftime><F>13</F><D>NA</D><T>2</T><W>Lítils háttar snjókoma</W></forecast><forecast><ftime>2025-02-01 18:00:00</ftime><F>13</F><D>NNA</D><T>-1</T><W>Skýjað</W></forecast><forecast><ftime>2025-02-02 00:00:00</ftime><F>11</F><D>NNV</D><T>-1</T><W>Léttskýjað</W>
+    </forecast>
+  </station>
+</forecasts>
