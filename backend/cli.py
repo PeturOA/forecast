@@ -53,6 +53,7 @@ def bid_welcome() -> None:
 
 def report_forecast() -> None:
     """Ask user for input and display the forecast data."""
+
     if len(AVAILABLE_LOCATIONS) == 1:
         location = AVAILABLE_LOCATIONS[0]
         print(f"At the moment, the forecast is only available for {location}.")
@@ -74,6 +75,7 @@ def keep_going() -> bool:
 
 def ask_for_location_input():
     """Ask user to specify which area they are interested in."""
+
     print("Please select a location to enquire about.")
     print("The following locations are available at the moment:")
     print(
@@ -94,6 +96,7 @@ def ask_for_location_input():
 
 def ask_for_time_input() -> tuple[datetime]:
     """Ask user to specify which time they are interested in."""
+
     print("Please choose whether you want the weather forecast for:")
     print("1. One specific point in time.")
     print("2. The interval between two specific points in time.")
@@ -118,6 +121,8 @@ def ask_for_desired_time() -> datetime:
 
 
 def ask_for_time_point() -> datetime:
+    """Get day and hour."""
+
     print("What day? '0' for today, '1' for tomorrow, etc.")
     while not valid_day(days_ahead := input().strip()):
         print("Please enter a non-negative integer")
@@ -150,6 +155,7 @@ def valid_hour(hour: str) -> bool:
 
 def ask_for_desired_period() -> tuple[datetime]:
     """Ask the user to specify two ends of a forecast interval."""
+
     print("Please specify first one end of the period you want.")
     start = ask_for_time_point()
 
@@ -164,6 +170,7 @@ def ask_for_desired_period() -> tuple[datetime]:
 
 def present_results(forecast: dict) -> None:
     """Display the forecast in a somewhat readable format."""
+
     print("The forecast for the selectd time is as follows:")
     for station in forecast.values():
         print(f"\t{station['name']}")

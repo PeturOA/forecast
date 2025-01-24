@@ -46,6 +46,7 @@ def fetch_forecast(
             ]
         ]
     )
+
     measures = ";".join(MEASURES)
     parameters = "&".join(
         [
@@ -57,6 +58,7 @@ def fetch_forecast(
             f"params={measures}",
         ]
     )
+
     url = f"https://{API_URL}?{parameters}"
     response = requests.get(url=url)
 
@@ -70,6 +72,7 @@ def extract_data_from_response(
     xml: str, start: datetime, end: datetime
 ) -> dict[str, dict]:
     """Parse the xml response and pick out the relevant info."""
+
     xml_root = ET.fromstring(xml)
 
     data = {}
@@ -111,6 +114,7 @@ def update_bounds(
     first_after,
 ) -> tuple:
     """Update lower or upper bounds if new time is closer to the desired interval."""
+
     new_time = current_forecast["time"]
     if new_time < start:
         # Before desired interval. Only keep the closest one,
