@@ -1,3 +1,11 @@
+# Standard library imports.
+from datetime import datetime, timedelta
+
+# Third party imports.
+
+# Local application imports.
+
+
 YES, NO = "Y", "N"
 AVAILABLE_LOCATIONS = (
     "Reykjavík",
@@ -82,7 +90,7 @@ def ask_for_location_input():
     return choice
 
 
-def ask_for_time_input():
+def ask_for_time_input() -> tuple[datetime]:
     """Ask user to specify which time they are interested in."""
     print("Please choose whether you want the weather forecast for:")
     print("1. One specific point in time.")
@@ -101,9 +109,38 @@ def ask_for_time_input():
         return ask_for_desired_period()
 
 
-def ask_for_desired_time():
+def ask_for_desired_time() -> datetime:
     """Ask the user to specify a single point for which to check the forecast."""
-    raise NotImplementedError
+    print("For what time would you like to see the forecast?")
+
+    print("What day? '0' for today, '1' for tomorrow, etc.")
+    while not valid_day(days_ahead := input().strip()):
+        print("Please enter a non-negative integer")
+
+    print("At which hour? (Integer from 0 to 23):")
+    while not valid_hour(hour := input()):
+        print("Please enter an integer between 0 and 23 (inclusive).")
+
+    time = datetime.today() + timedelta(int(days_ahead))
+    time = time.replace(hour=int(hour), minute=0, second=0, microsecond=0)
+    print(f"You have selected the date {time}")
+    return time
+
+
+def valid_day(days: str) -> bool:
+    try:
+        number_of_days = int(days)
+        return number_of_days >= 0
+    except ValueError:
+        return False
+
+
+def valid_hour(hour: str) -> bool:
+    try:
+        hour = int(hour)
+        return 0 <= hour <= 23
+    except ValueError:
+        return False
 
 
 def ask_for_desired_period():
