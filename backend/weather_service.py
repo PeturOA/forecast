@@ -3,12 +3,13 @@ from datetime import datetime, timedelta
 import requests
 
 # Third party imports.
+import defusedxml.ElementTree as ET
 
 # Local application imports.
 
 
 API_URL = "xmlweather.vedur.is"
-
+DATE_FORMAT = "%Y-%m-%d %H:%M:%S"  # "YYYY-MM-DD hh:mm:ss"
 ICELANDIC = "is"
 ENGLISH = "en"
 LANGUAGES = (ICELANDIC, ENGLISH)
@@ -60,4 +61,65 @@ def extract_data_from_response(
     xml: str, start: datetime, end: datetime
 ) -> dict[str, dict]:
     """Parse the xml response and pick out the relevant info."""
-    raise NotImplementedError
+    xml_root = ET.fromstring(xml)
+
+    data = {}
+    for station in xml_root:
+        predictions = []
+        last_before = None
+        first_after = None
+
+        for forecast in station.findall("forecast"):
+            time_str = forecast.find("ftime").text
+            time = datetime.strptime(time_str, DATE_FORMAT)
+            forecast_info = {"time": time}
+            for measure in MEASURES:
+                forecast_info[measure] = forecast.find(measure).text
+
+            if start <= time <= end:
+                predictions.append(forecast_info)
+            else:
+                last_before, first_after = update_bounds(
+                    forecast_info, start, end, last_before, first_after
+                )
+
+        id = station.attrib["id"]
+        data[id] = {
+            "name": station.find("name").text,
+            "last_before": last_before,
+            "predictions": predictions,
+            "first_after": first_after,
+        }
+
+    return data
+
+
+def update_bounds(
+    current_forecast: dict,
+    start: str,
+    end: str,
+    last_before,
+    first_after,
+) -> tuple:
+    """Update lower or upper bounds if new time is closer to the desired interval."""
+    new_time = current_forecast["time"]
+    if new_time < start:
+        # Before desired interval. Only keep the closest one,
+        # in case no data is available within the interval.
+        if last_before is None:
+            last_before = current_forecast
+        elif last_before["time"] < new_time:
+            assert last_before["time"] < new_time < start
+            last_before = current_forecast
+
+    else:
+        assert end < new_time
+        # After desired interval. Only keep the closest one,
+        # in case no data is available within the interval.
+        if first_after is None:
+            first_after = current_forecast
+        elif new_time < first_after["time"]:
+            assert end < new_time < first_after["time"]
+            first_after = current_forecast
+
+    return last_before, first_after
