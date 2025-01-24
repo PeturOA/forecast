@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 # Third party imports.
 
 # Local application imports.
+import weather_service as ws
 
 
 YES, NO = "Y", "N"
@@ -52,6 +53,7 @@ def bid_welcome() -> None:
 
 def report_forecast() -> None:
     """Ask user for input and display the forecast data."""
+
     if len(AVAILABLE_LOCATIONS) == 1:
         location = AVAILABLE_LOCATIONS[0]
         print(f"At the moment, the forecast is only available for {location}.")
@@ -60,7 +62,8 @@ def report_forecast() -> None:
 
     start, end = ask_for_time_input()
 
-    raise NotImplementedError
+    forecast = ws.fetch_forecast(start=start, end=end)
+    present_results(forecast)
 
 
 def keep_going() -> bool:
@@ -72,6 +75,7 @@ def keep_going() -> bool:
 
 def ask_for_location_input():
     """Ask user to specify which area they are interested in."""
+
     print("Please select a location to enquire about.")
     print("The following locations are available at the moment:")
     print(
@@ -92,6 +96,7 @@ def ask_for_location_input():
 
 def ask_for_time_input() -> tuple[datetime]:
     """Ask user to specify which time they are interested in."""
+
     print("Please choose whether you want the weather forecast for:")
     print("1. One specific point in time.")
     print("2. The interval between two specific points in time.")
@@ -116,6 +121,8 @@ def ask_for_desired_time() -> datetime:
 
 
 def ask_for_time_point() -> datetime:
+    """Get day and hour."""
+
     print("What day? '0' for today, '1' for tomorrow, etc.")
     while not valid_day(days_ahead := input().strip()):
         print("Please enter a non-negative integer")
@@ -148,6 +155,7 @@ def valid_hour(hour: str) -> bool:
 
 def ask_for_desired_period() -> tuple[datetime]:
     """Ask the user to specify two ends of a forecast interval."""
+
     print("Please specify first one end of the period you want.")
     start = ask_for_time_point()
 
@@ -158,6 +166,47 @@ def ask_for_desired_period() -> tuple[datetime]:
         start, end = end, start
 
     return (start, end)
+
+
+def present_results(forecast: dict) -> None:
+    """Display the forecast in a somewhat readable format."""
+
+    print("The forecast for the selectd time is as follows:")
+    for station in forecast.values():
+        print(f"\t{station['name']}")
+        predictions = station["predictions"]
+
+        if not predictions:
+            print("No forecast available for the specified time.")
+            closest = []
+
+            last_before = station["last_before"]
+            if last_before is not None:
+                closest.append(last_before)
+
+            first_after = station["first_after"]
+            if first_after is not None:
+                closest.append(first_after)
+
+            if closest:
+                print("The closest forecast is as follows:")
+                predictions = closest
+
+        print(
+            f"{'time':20}",
+            f"{'temperature':13}",
+            f"{'windspeed(m/s)':16}",
+            f"{'direction':13}",
+            f"{'description':13}",
+            sep="",
+        )
+
+        for prediction in predictions:
+            print(f"{prediction['time']:20}", end="")
+            for measure in ws.MEASURES:
+                print(f"{prediction[measure]:^14}", end="")
+
+            print()
 
 
 if __name__ == "__main__":
