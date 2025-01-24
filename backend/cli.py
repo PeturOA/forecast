@@ -1,3 +1,6 @@
+YES, NO = "Y", "N"
+
+
 def main():
     """Prompt user for input and display the desired data.
     
@@ -22,7 +25,9 @@ def report_forecast() -> None:
 
 def keep_going() -> bool:
     """Ask user if they want to continue."""
-    raise NotImplementedError
+    print("Do you want to know more? (Y)es/(N)o.")
+    answer = input()
+    return answer.upper() == YES
 
 
 
