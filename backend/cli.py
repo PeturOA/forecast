@@ -164,7 +164,42 @@ def ask_for_desired_period() -> tuple[datetime]:
 
 def present_results(forecast: dict) -> None:
     """Display the forecast in a somewhat readable format."""
-    raise NotImplementedError
+    print("The forecast for the selectd time is as follows:")
+    for station in forecast.values():
+        print(f"\t{station['name']}")
+        predictions = station["predictions"]
+
+        if not predictions:
+            print("No forecast available for the specified time.")
+            closest = []
+
+            last_before = station["last_before"]
+            if last_before is not None:
+                closest.append(last_before)
+
+            first_after = station["first_after"]
+            if first_after is not None:
+                closest.append(first_after)
+
+            if closest:
+                print("The closest forecast is as follows:")
+                predictions = closest
+
+        print(
+            f"{'time':20}",
+            f"{'temperature':13}",
+            f"{'windspeed(m/s)':16}",
+            f"{'direction':13}",
+            f"{'description':13}",
+            sep="",
+        )
+
+        for prediction in predictions:
+            print(f"{prediction['time']:20}", end="")
+            for measure in ws.MEASURES:
+                print(f"{prediction[measure]:^14}", end="")
+
+            print()
 
 
 if __name__ == "__main__":
