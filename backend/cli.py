@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 # Third party imports.
 
 # Local application imports.
+import weather_service as ws
 
 
 YES, NO = "Y", "N"
@@ -60,7 +61,8 @@ def report_forecast() -> None:
 
     start, end = ask_for_time_input()
 
-    raise NotImplementedError
+    forecast = ws.fetch_forecast(start=start, end=end)
+    present_results(forecast)
 
 
 def keep_going() -> bool:
@@ -158,6 +160,11 @@ def ask_for_desired_period() -> tuple[datetime]:
         start, end = end, start
 
     return (start, end)
+
+
+def present_results(forecast: dict) -> None:
+    """Display the forecast in a somewhat readable format."""
+    raise NotImplementedError
 
 
 if __name__ == "__main__":
