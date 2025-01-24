@@ -68,7 +68,11 @@ def ask_for_location_input():
     )
     print("Please enter the number given in front of the option you want.")
 
-    choice = input().strip()
+    num_options = len(AVAILABLE_LOCATIONS)
+    while (choice := input().strip()) not in (f"{idx+1}" for idx in range(num_options)):
+        print(f"{choice} is not one of the available options.")
+        print(f"Please enter a number between 1 and {num_options} (inclusive).")
+
     print(f"You have selected {AVAILABLE_LOCATIONS[int(choice)-1]}")
     return choice
 
