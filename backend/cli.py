@@ -15,7 +15,7 @@ def main():
 
 def bid_welcome() -> None:
     """Greet user."""
-    raise NotImplementedError
+    print("Good day, I hope. Well, we shall see, perhaps.")
 
 
 def report_forecast() -> None:
