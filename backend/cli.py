@@ -1,4 +1,28 @@
 YES, NO = "Y", "N"
+AVAILABLE_LOCATIONS = (
+    "Reykjavík",
+    # "Grindavík",
+    # "Keflavík",
+    # "Stykkishólmur",
+    # "Patreksfjörður",
+    # "Ísafjörður",
+    # "Hólmavík",
+    # "Blönduós",
+    # "Siglufjörður",
+    # "Grímsey",
+    # "Akureyri",
+    # "Húsavík",
+    # "Raufarhöfn",
+    # "Egilstaðir",
+    # "Fáskrúðsfjörður",
+    # "Höfn í Hornafirði",
+    # "Skaftafell",
+    # "Kirkjubæjarklaustur",
+    # "Vík í Mýrdal",
+    # "Vestmannaeyjar",
+    # "Hella",
+    # "Þingvellir",
+)
 
 
 def main():
@@ -34,7 +58,18 @@ def keep_going() -> bool:
 
 def ask_for_location_input():
     """Ask user to specify which area they are interested in."""
-    raise NotImplementedError
+    print("Please select a location to enquire about.")
+    print("The following locations are available at the moment:")
+    print(
+        "\n".join(
+            [f"{idx+1}. {location}" for idx, location in enumerate(AVAILABLE_LOCATIONS)]
+        )
+    )
+    print("Please enter the number given in front of the option you want.")
+
+    choice = input().strip()
+    print(f"You have selected {AVAILABLE_LOCATIONS[int(choice)-1]}")
+    return choice
 
 
 def ask_for_time_input():
