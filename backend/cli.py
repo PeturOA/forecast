@@ -27,7 +27,7 @@ AVAILABLE_LOCATIONS = (
 
 def main():
     """Prompt user for input and display the desired data.
-    
+
     Repeat the process as long as the user's curiosity prevails.
     """
     bid_welcome()
@@ -55,6 +55,7 @@ def keep_going() -> bool:
     print("Do you want to know more? (Y)es/(N)o.")
     answer = input()
     return answer.upper() == YES
+
 
 def ask_for_location_input():
     """Ask user to specify which area they are interested in."""
