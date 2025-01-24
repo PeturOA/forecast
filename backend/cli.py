@@ -84,6 +84,30 @@ def ask_for_location_input():
 
 def ask_for_time_input():
     """Ask user to specify which time they are interested in."""
+    print("Please choose whether you want the weather forecast for:")
+    print("1. One specific point in time.")
+    print("2. The interval between two specific points in time.")
+
+    while (choice := input().strip()) not in ("1", "2"):
+        print(f"'{choice}' is neither '1' nor '2'.")
+        print("Please enter either '1' or '2'.")
+
+    assert choice in ("1", "2")
+    if choice == "1":
+        start = end = ask_for_desired_time()
+        return start, end
+    else:
+        assert choice == "2"
+        return ask_for_desired_period()
+
+
+def ask_for_desired_time():
+    """Ask the user to specify a single point for which to check the forecast."""
+    raise NotImplementedError
+
+
+def ask_for_desired_period():
+    """Ask the user to specify two ends of a forecast interval."""
     raise NotImplementedError
 
 
