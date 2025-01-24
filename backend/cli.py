@@ -20,6 +20,9 @@ def bid_welcome() -> None:
 
 def report_forecast() -> None:
     """Ask user for input and display the forecast data."""
+    location = ask_for_location_input()
+    start, end = ask_for_time_input()
+
     raise NotImplementedError
 
 
@@ -29,6 +32,14 @@ def keep_going() -> bool:
     answer = input()
     return answer.upper() == YES
 
+def ask_for_location_input():
+    """Ask user to specify which area they are interested in."""
+    raise NotImplementedError
+
+
+def ask_for_time_input():
+    """Ask user to specify which time they are interested in."""
+    raise NotImplementedError
 
 
 if __name__ == "__main__":
